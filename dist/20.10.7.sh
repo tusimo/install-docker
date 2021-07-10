@@ -22,14 +22,14 @@ set -e
 SCRIPT_COMMIT_SHA="7cae5f8b0decc17d6571f9f52eb840fbc13b2737"
 
 CHANNEL="stable"
-DOWNLOAD_URL="https://download.docker.com"
+DOWNLOAD_URL="https://mirrors.aliyun.com/docker-ce"
 REPO_FILE="docker-ce.repo"
 VERSION=20.10.7
 DIND_TEST_WAIT=${DIND_TEST_WAIT:-3s}  # Wait time until docker start at dind test env
 
 # Issue https://github.com/rancher/rancher/issues/29246
 adjust_repo_releasever() {
-	DOWNLOAD_URL="https://download.docker.com"
+	DOWNLOAD_URL="https://mirrors.aliyun.com/docker-ce"
 	case $1 in
 	7*)
 		releasever=7
